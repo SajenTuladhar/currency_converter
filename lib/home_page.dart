@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 
 class Home extends StatelessWidget {
@@ -17,15 +18,20 @@ class Home extends StatelessWidget {
                color: Colors.white,
                fontSize: 60,
             ),),
-            TextField(
-              
-              decoration: InputDecoration(
-                hintText: 'Value',
-                
-                hintStyle: TextStyle(color: Color.fromARGB(255, 100, 99, 99)),
-                border: OutlineInputBorder(
-                  //gapPadding: 100,
-                )
+            SizedBox(height: 20,),
+            Padding(
+              padding: EdgeInsets.all(25),
+              child: TextField(
+                style: TextStyle(color: Colors.white),
+                decoration: InputDecoration(
+                   hintText: 'Input amount in USD',
+                   hintStyle: TextStyle(color: Color.fromARGB(255, 100, 99, 99)),
+                  border: OutlineInputBorder(
+                    //gapPadding: 100,
+                  ),
+                  prefixIcon: Icon(Icons.monetization_on_outlined),
+                ),
+                keyboardType: TextInputType.numberWithOptions(),
               ),
             )
           ],
