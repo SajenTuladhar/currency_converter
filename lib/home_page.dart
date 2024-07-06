@@ -7,19 +7,19 @@ class Home extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return  Scaffold(
       backgroundColor: Colors.black,
       body:  Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text('0', 
+            const Text('0', 
             style: TextStyle(
                color: Colors.white,
                fontSize: 60,
             ),),
-            SizedBox(height: 20,),
-            Padding(
+            const SizedBox(height: 20,),
+            const Padding(
               padding: EdgeInsets.all(25),
               child: TextField(
                 style: TextStyle(color: Colors.white),
@@ -33,7 +33,9 @@ class Home extends StatelessWidget {
                 ),
                 keyboardType: TextInputType.numberWithOptions(),
               ),
-            )
+              
+            ),
+            ElevatedButton(onPressed: () {}, child: const Text('Enter'))
           ],
         ),
         
